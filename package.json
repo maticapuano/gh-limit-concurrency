@@ -4,11 +4,17 @@
   "description": "GitHub Action to limit concurrent workflows by group",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "tsc"
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^5.0.0",
     "@octokit/rest": "^18.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
