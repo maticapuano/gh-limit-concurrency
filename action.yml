@@ -1,0 +1,16 @@
+name: "Group Concurrency Limit Action"
+description: "Limits the number of concurrent workflows running in a specified group"
+inputs:
+  repo-token:
+    description: "GitHub token to access the repository"
+    required: true
+  group:
+    description: "Group name to limit concurrent workflows"
+    required: true
+  max-concurrent:
+    description: "Maximum number of concurrent workflows allowed in the group"
+    required: true
+    default: 1
+runs:
+  using: "node16"
+  main: "app.js"

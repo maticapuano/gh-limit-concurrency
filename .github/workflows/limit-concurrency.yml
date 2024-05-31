@@ -1,0 +1,14 @@
+name: "Limit Concurrency Test"
+on: [push]
+
+jobs:
+  limit-concurrency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Limit concurrency
+        uses: ./
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          group: "test-group"
+          max-concurrent: 2
