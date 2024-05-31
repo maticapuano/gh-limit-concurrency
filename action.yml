@@ -10,7 +10,7 @@ inputs:
   max-concurrent:
     description: "Maximum number of concurrent workflows allowed in the group"
     required: true
-    default: 1
+    default: "1"
 runs:
   using: "node16"
-  main: "app.js"
+  main: "index.js"
